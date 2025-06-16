@@ -109,6 +109,77 @@
   transform: scale(1.1);
 }
 
+/* Custom styles for the carousel section */
+.carousel-section {
+    padding-top: 6em; /* Adjust as needed for spacing */
+    padding-bottom: 6em; /* Adjust as needed for spacing */
+    background-color: black; /* Changed to black background */
+    color: white; /* Changed text color to white for visibility */
+}
+
+/* Ensure headings inside carousel section are white */
+.carousel-section h1,
+.carousel-section h2,
+.carousel-section p {
+    color: white;
+}
+
+.caro-carousel .item img {
+    width: 100%; /* Ensure images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Adjust Owl Carousel navigation and dots for better appearance */
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    background: rgba(255, 189, 57, 0.8) !important; /* Yellowish background */
+    color: white !important;
+    border-radius: 50% !important;
+    font-size: 24px !important;
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 38px !important;
+    text-align: center !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 10px !important;
+    transition: background-color 0.3s ease;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+    background: #e6a72e !important; /* Darker yellow on hover */
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: -20px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: -20px;
+}
+
+.owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-carousel .owl-dot span {
+    background: #ccc;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.owl-carousel .owl-dot.active span {
+    background: #ffbd39; /* Active dot color */
+}
 
 </style>
 
@@ -130,6 +201,7 @@
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#carousel-section" class="nav-link"><span>Gallery</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
@@ -149,7 +221,6 @@
 		          		<span class="subheading">Namaste!</span>
 			            <h1 class="mb-4 mt-3">I'm <span>Ashwin Dhakal</span></h1>
 
-						<!-- Element to contain animated typing -->
 						<span id="typing-animation"></span>
 
 						<script>
@@ -188,9 +259,7 @@
 						<br>
 						<br>
 			            <h2>A Full Stack Software Developer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/ashwindhakal007" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+						<p><a href="https://www.linkedin.com/in/ashwindhakal007" class="btn btn-primary py-3 px-4">LinkedIn</a> 
 							<a href="https://github.com/theeddiestudio" class="btn btn-white btn-outline-white py-3 px-4">Github</a></p>
 		            </div>
 		          </div>
@@ -206,8 +275,7 @@
     	<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
+				<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
 								<div class="row">
@@ -216,7 +284,6 @@
 										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
 									  </div>
 									</div>
-									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Ashwin Dhakal</span></p>
@@ -420,10 +487,20 @@
             <p>Below are the projects that I have worked over the years on Graphics Designing, Unity Game Engine, Blender3D & Software Engineering.</p>
           </div>
         </div>
-        <!-- add more projects here as we go -->
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
+        <br>
+		
+		<div class="row d-flex justify-content-center"> 
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://drive.google.com/file/d/1zJ8PfgDQD2f31i70sVQSMHAvIhk6QCo7/view?usp=sharing" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://drive.google.com/file/d/1zJ8PfgDQD2f31i70sVQSMHAvIhk6QCo7/view?usp=sharing">IOE Academic Calendar 2080</a></h3>
+				  <p>Designed the academic calendar for ANNFSU. The published calendar has my photo and name printed in it for my contribution.</p>
+				</div>
+			  </div>
+			</div> 
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
 				<a href="https://github.com/theeddiestudio/wtracker/blob/main/lib/main.dart" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
@@ -435,6 +512,7 @@
 				</div>
 			  </div>
 			</div>
+			
 		 <div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
 				<a href="https://github.com/theeddiestudio/ProjectRPG2D/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
@@ -450,7 +528,7 @@
 	  </div>
     </section>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
       <div class="container">
 		<div class="row d-md-flex align-items-center">
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
@@ -481,8 +559,7 @@
       </div>
 	
 	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
+			<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
 						<h2>More projects on<span> Github  </span> </h2>
 						<div class="heading"> <h4> I love to Work in Team and Prefer Modular Approach to Software Design. </h4>
@@ -491,11 +568,125 @@
 						</div>
 					</div>
 				</div>
-			<!-- </div> -->
-		</div>
+			</div>
 	</section>
 
-
+<section class="ftco-section" id="carousel-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">TES</h1>
+                    <h2 class="mb-4">Gallery</h2>
+                    <p>A collection of images showcasing my work and projects. I have worked with organisations and they have specific requirements for the designs.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ftco-animate">
+                    <div class="owl-carousel owl-theme caro-carousel">
+                        <div class="item">
+    <img src="caro/1.png" onerror="this.onerror=null; this.src='caro/1.jpg';" alt="Image 1" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/2.jpg" onerror="this.onerror=null; this.src='caro/2.png';" alt="Image 2" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/3.png" onerror="this.onerror=null; this.src='caro/3.jpg';" alt="Image 3" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/4.jpg" onerror="this.onerror=null; this.src='caro/4.png';" alt="Image 4" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/5.png" onerror="this.onerror=null; this.src='caro/5.jpg';" alt="Image 5" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/6.jpg" onerror="this.onerror=null; this.src='caro/6.png';" alt="Image 6" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/7.png" onerror="this.onerror=null; this.src='caro/7.jpg';" alt="Image 7" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/8.jpg" onerror="this.onerror=null; this.src='caro/8.png';" alt="Image 8" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/9.png" onerror="this.onerror=null; this.src='caro/9.jpg';" alt="Image 9" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/10.jpg" onerror="this.onerror=null; this.src='caro/10.png';" alt="Image 10" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/11.png" onerror="this.onerror=null; this.src='caro/11.jpg';" alt="Image 11" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/12.jpg" onerror="this.onerror=null; this.src='caro/12.png';" alt="Image 12" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/13.png" onerror="this.onerror=null; this.src='caro/13.jpg';" alt="Image 13" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/14.jpg" onerror="this.onerror=null; this.src='caro/14.png';" alt="Image 14" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/15.png" onerror="this.onerror=null; this.src='caro/15.jpg';" alt="Image 15" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/16.jpg" onerror="this.onerror=null; this.src='caro/16.png';" alt="Image 16" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/17.png" onerror="this.onerror=null; this.src='caro/17.jpg';" alt="Image 17" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/18.jpg" onerror="this.onerror=null; this.src='caro/18.png';" alt="Image 18" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/19.png" onerror="this.onerror=null; this.src='caro/19.jpg';" alt="Image 19" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/20.jpg" onerror="this.onerror=null; this.src='caro/20.png';" alt="Image 20" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/21.png" onerror="this.onerror=null; this.src='caro/21.jpg';" alt="Image 21" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/22.jpg" onerror="this.onerror=null; this.src='caro/22.png';" alt="Image 22" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/23.png" onerror="this.onerror=null; this.src='caro/23.jpg';" alt="Image 23" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/24.jpg" onerror="this.onerror=null; this.src='caro/24.png';" alt="Image 24" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/25.png" onerror="this.onerror=null; this.src='caro/25.jpg';" alt="Image 25" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/26.jpg" onerror="this.onerror=null; this.src='caro/26.png';" alt="Image 26" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/27.png" onerror="this.onerror=null; this.src='caro/27.jpg';" alt="Image 27" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/28.jpg" onerror="this.onerror=null; this.src='caro/28.png';" alt="Image 28" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/29.png" onerror="this.onerror=null; this.src='caro/29.jpg';" alt="Image 29" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/30.jpg" onerror="this.onerror=null; this.src='caro/30.png';" alt="Image 30" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/31.png" onerror="this.onerror=null; this.src='caro/31.jpg';" alt="Image 31" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/32.jpg" onerror="this.onerror=null; this.src='caro/32.png';" alt="Image 32" class="img-fluid">
+</div>
+<div class="item">
+    <img src="caro/33.png" onerror="this.onerror=null; this.src='caro/33.jpg';" alt="Image 33" class="img-fluid">
+</div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
@@ -574,16 +765,14 @@
 		  <div class="row">
 			<div class="col-md-12 text-center">
   
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			  <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	</p>
 			</div>
 		  </div>
 		</div>
 	  </footer>
 
 
-  <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
@@ -601,6 +790,34 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function() {
+        $('.caro-carousel').owlCarousel({
+            loop:true,
+            margin:20, // Increased margin between items
+            nav:true, // Show navigation arrows
+            dots:true, // Show pagination dots
+            autoplay:true,
+            autoplayTimeout:2700, // Reduced autoplay timeout for faster slide
+            autoplayHoverPause:true,
+            responsive:{
+                0:{
+                    items:1 // 1 item on extra small devices (mobile portrait)
+                },
+                576:{ // Bootstrap's 'sm' breakpoint
+                    items:1 // 1 item on small devices (mobile landscape, tablets)
+                },
+                768:{ // Bootstrap's 'md' breakpoint
+                    items:2 // 2 items on medium devices (tablets, small laptops)
+                },
+                992:{ // Bootstrap's 'lg' breakpoint
+                    items:3 // 3 items on large devices (desktops)
+                }
+            }
+        });
+    });
+  </script>
     
   </body>
 </html>
