@@ -124,12 +124,30 @@
     color: white;
 }
 
+/* Vertical centering and responsive image styling for carousel */
+.caro-carousel .item {
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    min-height: 450px; /* Set a minimum height for items to allow vertical centering */
+    overflow: hidden; /* Added to contain the zoom effect */
+}
+
 .caro-carousel .item img {
     width: 100%; /* Ensure images fill their container */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Rounded corners for images */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-height: 400px; /* Limit the maximum height of the image */
+    object-fit: contain; /* Ensure the whole image is visible within the container */
+    cursor: pointer; /* Indicate clickability */
+    transition: transform 0.3s ease-out; /* Add transition for smooth zoom */
 }
+
+.caro-carousel .item img:hover {
+    transform: scale(1.05); /* Slightly less zoom than projects to avoid overflowing carousel bounds */
+}
+
 
 /* Adjust Owl Carousel navigation and dots for better appearance */
 .owl-carousel .owl-nav button.owl-prev,
@@ -181,6 +199,11 @@
     background: #ffbd39; /* Active dot color */
 }
 
+.fullscreen-button-container {
+    text-align: center; /* Center the button */
+    margin-top: 30px; /* Space above the button */
+}
+
 </style>
 
 
@@ -201,7 +224,7 @@
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-			  <li class="nav-item"><a href="#carousel-section" class="nav-link"><span>Gallery</span></a></li>
+			  <li class="nav-item"><a href="#designs-section" class="nav-link"><span>Designs</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
@@ -572,125 +595,137 @@
 			</div>
 	</section>
 
-<section class="ftco-section" id="carousel-section">
-        <div class="container">
-            <div class="row justify-content-center pb-5">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">TES</h1>
-                    <h2 class="mb-4">Gallery</h2>
-                    <p>A collection of images showcasing my work and projects. I have worked with organisations and they have specific requirements for the designs.</p>
-                </div>
+<!-- START IMAGE CAROUSEL SECTION -->
+<section class="ftco-section designs-section" id="designs-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">TES</h1>
+                <h2 class="mb-4">Designs</h2>
+                <p>A collection of images showcasing my work and projects. I have worked with organisations and they have specific requirements for the designs.</p>
             </div>
-            <div class="row">
-                <div class="col-md-12 ftco-animate">
-                    <div class="owl-carousel owl-theme caro-carousel">
-                        <div class="item">
-    <img src="caro/1.png" onerror="this.onerror=null; this.src='caro/1.jpg';" alt="Image 1" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/2.jpg" onerror="this.onerror=null; this.src='caro/2.png';" alt="Image 2" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/3.png" onerror="this.onerror=null; this.src='caro/3.jpg';" alt="Image 3" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/4.jpg" onerror="this.onerror=null; this.src='caro/4.png';" alt="Image 4" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/5.png" onerror="this.onerror=null; this.src='caro/5.jpg';" alt="Image 5" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/6.jpg" onerror="this.onerror=null; this.src='caro/6.png';" alt="Image 6" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/7.png" onerror="this.onerror=null; this.src='caro/7.jpg';" alt="Image 7" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/8.jpg" onerror="this.onerror=null; this.src='caro/8.png';" alt="Image 8" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/9.png" onerror="this.onerror=null; this.src='caro/9.jpg';" alt="Image 9" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/10.jpg" onerror="this.onerror=null; this.src='caro/10.png';" alt="Image 10" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/11.png" onerror="this.onerror=null; this.src='caro/11.jpg';" alt="Image 11" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/12.jpg" onerror="this.onerror=null; this.src='caro/12.png';" alt="Image 12" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/13.png" onerror="this.onerror=null; this.src='caro/13.jpg';" alt="Image 13" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/14.jpg" onerror="this.onerror=null; this.src='caro/14.png';" alt="Image 14" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/15.png" onerror="this.onerror=null; this.src='caro/15.jpg';" alt="Image 15" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/16.jpg" onerror="this.onerror=null; this.src='caro/16.png';" alt="Image 16" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/17.png" onerror="this.onerror=null; this.src='caro/17.jpg';" alt="Image 17" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/18.jpg" onerror="this.onerror=null; this.src='caro/18.png';" alt="Image 18" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/19.png" onerror="this.onerror=null; this.src='caro/19.jpg';" alt="Image 19" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/20.jpg" onerror="this.onerror=null; this.src='caro/20.png';" alt="Image 20" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/21.png" onerror="this.onerror=null; this.src='caro/21.jpg';" alt="Image 21" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/22.jpg" onerror="this.onerror=null; this.src='caro/22.png';" alt="Image 22" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/23.png" onerror="this.onerror=null; this.src='caro/23.jpg';" alt="Image 23" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/24.jpg" onerror="this.onerror=null; this.src='caro/24.png';" alt="Image 24" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/25.png" onerror="this.onerror=null; this.src='caro/25.jpg';" alt="Image 25" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/26.jpg" onerror="this.onerror=null; this.src='caro/26.png';" alt="Image 26" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/27.png" onerror="this.onerror=null; this.src='caro/27.jpg';" alt="Image 27" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/28.jpg" onerror="this.onerror=null; this.src='caro/28.png';" alt="Image 28" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/29.png" onerror="this.onerror=null; this.src='caro/29.jpg';" alt="Image 29" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/30.jpg" onerror="this.onerror=null; this.src='caro/30.png';" alt="Image 30" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/31.png" onerror="this.onerror=null; this.src='caro/31.jpg';" alt="Image 31" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/32.jpg" onerror="this.onerror=null; this.src='caro/32.png';" alt="Image 32" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/33.png" onerror="this.onerror=null; this.src='caro/33.jpg';" alt="Image 33" class="img-fluid">
-</div>
-<div class="item">
-    <img src="caro/34.jpg" onerror="this.onerror=null; this.src='caro/34.png';" alt="Image 34" class="img-fluid">
-</div>
-                        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div class="owl-carousel owl-theme caro-carousel">
+                    <!-- Image items are generated dynamically by the script now,
+                         but keeping a few for clarity if you prefer static entries.
+                         Ensure your 'caro' folder has images like 1.png, 2.jpg etc.
+                    -->
+                    <div class="item">
+                        <img src="caro/1.png" onerror="this.onerror=null; this.src='caro/1.jpg';" alt="Image 1" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/2.jpg" onerror="this.onerror=null; this.src='caro/2.png';" alt="Image 2" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/3.png" onerror="this.onerror=null; this.src='caro/3.jpg';" alt="Image 3" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/4.jpg" onerror="this.onerror=null; this.src='caro/4.png';" alt="Image 4" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/5.png" onerror="this.onerror=null; this.src='caro/5.jpg';" alt="Image 5" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/6.jpg" onerror="this.onerror=null; this.src='caro/6.png';" alt="Image 6" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/7.png" onerror="this.onerror=null; this.src='caro/7.jpg';" alt="Image 7" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/8.jpg" onerror="this.onerror=null; this.src='caro/8.png';" alt="Image 8" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/9.png" onerror="this.onerror=null; this.src='caro/9.jpg';" alt="Image 9" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/10.jpg" onerror="this.onerror=null; this.src='caro/10.png';" alt="Image 10" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/11.png" onerror="this.onerror=null; this.src='caro/11.jpg';" alt="Image 11" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/12.jpg" onerror="this.onerror=null; this.src='caro/12.png';" alt="Image 12" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/13.png" onerror="this.onerror=null; this.src='caro/13.jpg';" alt="Image 13" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/14.jpg" onerror="this.onerror=null; this.src='caro/14.png';" alt="Image 14" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/15.png" onerror="this.onerror=null; this.src='caro/15.jpg';" alt="Image 15" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/16.jpg" onerror="this.onerror=null; this.src='caro/16.png';" alt="Image 16" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/17.png" onerror="this.onerror=null; this.src='caro/17.jpg';" alt="Image 17" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/18.jpg" onerror="this.onerror=null; this.src='caro/18.png';" alt="Image 18" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/19.png" onerror="this.onerror=null; this.src='caro/19.jpg';" alt="Image 19" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/20.jpg" onerror="this.onerror=null; this.src='caro/20.png';" alt="Image 20" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/21.png" onerror="this.onerror=null; this.src='caro/21.jpg';" alt="Image 21" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/22.jpg" onerror="this.onerror=null; this.src='caro/22.png';" alt="Image 22" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/23.png" onerror="this.onerror=null; this.src='caro/23.jpg';" alt="Image 23" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/24.jpg" onerror="this.onerror=null; this.src='caro/24.png';" alt="Image 24" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/25.png" onerror="this.onerror=null; this.src='caro/25.jpg';" alt="Image 25" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/26.jpg" onerror="this.onerror=null; this.src='caro/26.png';" alt="Image 26" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/27.png" onerror="this.onerror=null; this.src='caro/27.jpg';" alt="Image 27" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/28.jpg" onerror="this.onerror=null; this.src='caro/28.png';" alt="Image 28" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/29.png" onerror="this.onerror=null; this.src='caro/29.jpg';" alt="Image 29" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/30.jpg" onerror="this.onerror=null; this.src='caro/30.png';" alt="Image 30" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/31.png" onerror="this.onerror=null; this.src='caro/31.jpg';" alt="Image 31" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/32.jpg" onerror="this.onerror=null; this.src='caro/32.png';" alt="Image 32" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/33.png" onerror="this.onerror=null; this.src='caro/33.jpg';" alt="Image 33" class="img-fluid">
+                    </div>
+                    <div class="item">
+                        <img src="caro/34.jpg" onerror="this.onerror=null; this.src='caro/34.png';" alt="Image 34" class="img-fluid">
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6 text-center fullscreen-button-container ftco-animate">
+                <p><a href="#" id="view-fullscreen-btn" class="btn btn-primary py-3 px-5">View Fullscreen</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END IMAGE CAROUSEL SECTION -->
+
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
@@ -797,28 +832,44 @@
 
   <script>
     $(document).ready(function() {
-        $('.caro-carousel').owlCarousel({
+        // Initialize Owl Carousel
+        var owl = $('.caro-carousel').owlCarousel({
             loop:true,
             margin:20, // Increased margin between items
             nav:true, // Show navigation arrows
             dots:true, // Show pagination dots
             autoplay:true,
-            autoplayTimeout:2700, // Reduced autoplay timeout for faster slide
+            autoplayTimeout:4000, // Reduced autoplay timeout for faster slide
             autoplayHoverPause:true,
             responsive:{
-                0:{
-                    items:1 // 1 item on extra small devices (mobile portrait)
-                },
-                576:{ // Bootstrap's 'sm' breakpoint
-                    items:1 // 1 item on small devices (mobile landscape, tablets)
-                },
-                768:{ // Bootstrap's 'md' breakpoint
-                    items:2 // 2 items on medium devices (tablets, small laptops)
-                },
-                992:{ // Bootstrap's 'lg' breakpoint
-                    items:3 // 3 items on large devices (desktops)
-                }
+                0:{ items:1 }, // Show 1 item on all screen sizes
+                576:{ items:1 }, // Show 1 item on all screen sizes
+                768:{ items:1 }, // Show 1 item on all screen sizes
+                992:{ items:1 }  // Show 1 item on all screen sizes
             }
+        });
+
+        // Function to open image in fullscreen
+        function openImageFullscreen(imageSrc) {
+            if (imageSrc) {
+                window.open(imageSrc, '_blank');
+            } else {
+                console.error("Image source not found.");
+            }
+        }
+
+        // Handle "View Fullscreen" button click
+        $('#view-fullscreen-btn').on('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            // Get the src of the currently active image
+            var activeImageSrc = $('.caro-carousel .owl-item.active img').attr('src');
+            openImageFullscreen(activeImageSrc);
+        });
+
+        // Make carousel images clickable and add zoom effect on hover
+        $('.caro-carousel .item img').on('click', function() {
+            var imageSrc = $(this).attr('src');
+            openImageFullscreen(imageSrc);
         });
     });
   </script>
